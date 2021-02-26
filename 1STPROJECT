@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+     <meta charset="utf-8">
+     <title>ID card</title>
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2/family=Akaya+Telivigala/display=swap" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="style.css">
+      
+</head>
+<body>
+  <h1>Lets create an ID card!</h1>
+
+  <br>
+  
+  <form>
+    <label for="fullName">Full Name:</label><br>
+    <input type="text" name=fullName id="fullName" placeholder=" Full Name"> <br>
+    <br>
+    <label for="age">Age:</label><br>
+    <input type="number" name=age id="age" placeholder="required" min="1" max="200">
+    <br>
+    <label for="phoneNumber">Phone Number:</label><br>
+    <input type="text" name=phoneNumber id="phoneNumber" placeholder="Your Phone Number">
+    <br>
+    <label for="address">Address:</label><br>
+    <input type="text" name=address id="address" placeholder="Your address"><br>
+    <br>
+    <button type="button" onClick="idCard">Get ID card</button><br>
+  </form>
+   
+  <div id="idCard">
+    <img src="http://www.iconninja.com/files/373/611/612/person-user-profile-male-man-avatar-account-icon.svg">
+
+  
+    <p id="postFullName"></p>
+
+    <p id="postAge"></p>
+
+    <p id="postPhoneNumber"></p>
+
+    <p id="postAddress"></p>
+  
+  </div>
+
+  <script src="script.js"></script>
+ </body>
+</html>
+
+
+function idCard(){
+  
+var firstName="postFullName";
+var lastName="postFullName";
+var address="postAddress";
+
+document.getElementById("postFullName").innerHTML="firstName"+ " "+"lastName"[i];
+document.getElementById("postAddress").innerHTML='address';
+
+var age="postAge";
+var phoneNumber="postPhoneNumber";
+parseInt(document.getElementById("phoneNumber").value);
+parseInt(document.getElementById("age").value);
+
+   let numberArray=([]);
+  'numberArray'.push(address);
+  'numberArray'.push(age);
+
+for(var i=0;i<numberArray.length;i++){
+  if (numberArray[i]<=100) {
+    document.getElementById("postAge").innerHTML="Age:" + numberArray[i];
+  }
+  
+  else if (numberArray[i]>=100){
+    document.getByElementId("postPhoneNumber").innerHTML="Phone Number"+ numberArray[i];
+  }
+  
+}
+}
+  
+  
+  html{
+  background-color:red;
+  font-family: 'Aaya Telivigala',cursive;
+  text-align: center;
+  
+}
+img {  
+  border-radius: 25px;
+  display: block;
+  margin-left: 0.5;
+  margin-right: 0.5;
+  width: 20%;
+}
+input{
+  text-align: center;
+  margin:5px;
+}
+
+#idCard {
+  margin-top: 10px;
+  border-radius: 25px;
+  border:5px solid black;
+  height: 12em;
+  width:24em;
+  background-color: #ff66ff;
+  color:blue;
+  margin-left: auto;
+  margin-right: auto;
+}
